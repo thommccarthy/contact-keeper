@@ -1,6 +1,10 @@
 const express = require('express');
+const connectDB = require('./config/db');
 
 const app = express();
+
+// Connect database
+connectDB();
 
 // create route for get request
 app.get('/', (req, res) => {
